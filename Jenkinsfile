@@ -8,7 +8,7 @@ pipeline {
 
     triggers {
         githubPush()
-    } 
+    }
 
     stages {
 
@@ -65,7 +65,7 @@ pipeline {
             }
         }
 
-        stage('4. Enforce Security Gate') {
+        stage('4. Enforce Security Gate') { 
             steps {
                 script {
                     def report = readFile('reports/bandit_report.json')
